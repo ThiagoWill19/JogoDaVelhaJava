@@ -1,4 +1,3 @@
-package JogoDaVelha.com.will.application;
 
 import java.util.Scanner;
 
@@ -24,6 +23,7 @@ public class Game {
             
             limpaTela();
             display();
+            verificarVez();
             jogada();
             loop ++;
 
@@ -45,6 +45,13 @@ public class Game {
             }
             System.out.println("|");
         }
+    }
+    
+    
+    public void verificarVez() {
+    	if(loop % 2 == 0) {
+        	System.out.println("Vez do X");
+        }else System.out.println("Vez do O");
     }
 
     private void jogada(){
